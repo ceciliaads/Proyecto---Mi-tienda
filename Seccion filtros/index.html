@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seccion Filtros</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+</head>
+<body>
+
+
+    <section class="seccion-principal">
+
+
+        <aside>
+            <form>
+
+                <div class="filtros">
+                    <h2>FILTROS</h2>
+                </div>
+                <div class="limpiar">
+                    <p>Limpiar</p>
+                </div>
+
+                <label for="busqueda"> <h3>BUSQUEDA</h3>
+                    <div>
+                        <input class="form-busqueda" type="search" name="search" id="busqueda" placeholder="Buscar productos" />
+                    </div>    
+                </label>
+
+                <h3>CATEGORIA<h3>
+
+                <div class="contenedor-categorias">
+                    <label for="categorias">
+                        <input 
+                        type="checkbox" 
+                        name="categoria" 
+                        id="categorias" 
+                        value="consolas"
+                        />
+                        CONSOLAS
+
+                    </label>
+                </div>
+
+                
+                <div class="contenedor-categorias">
+                    <label for="categorias">
+                        <input 
+                        type="checkbox" 
+                        name="categoria" 
+                        id="categorias" 
+                        value="notebooks"
+                        />
+                        NOTEBOOKS
+                    </label>
+                </div>
+
+                <div class="contenedor-categorias">
+                    <label for="categorias">
+                        <input 
+                        type="checkbox" 
+                        name="categoria" 
+                        id="categorias" 
+                        value="camaras"
+                        />
+                        CAMARAS
+                    </label>
+                </div>
+
+                <div class="contenedor-categorias">
+                    <label for="categorias">
+                        <input 
+                        type="checkbox" 
+                        name="categoria" 
+                        id="categorias" 
+                        value="celulares"
+                        />
+                        CELULARES
+                    </label>
+                </div>
+
+                <div class="contenedor-categorias">
+                    <label for="categorias">
+                        <input 
+                        type="checkbox" 
+                        name="categoria" 
+                        id="categorias" 
+                        value="accesorios"
+                        />
+                        ACCESORIOS
+                    </label>
+                </div>
+        
+                <h3 class="filter-name">PUNTAJE</h3>
+
+                <div class="review">
+                    <label for="puntaje">
+                        <input
+                            type="checkbox"
+                            name="review"
+                            class="filter review-filter"
+                            value="5"
+                            id="puntaje"
+                        />
+                
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        (5)
+                    </label>
+                </div>
+
+                <div class="review">
+                    <label for="puntaje">
+                        <input
+                            type="checkbox"
+                            name="review"
+                            class="filter review-filter"
+                            value="4"
+                            id="puntaje"
+                        />
+                
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                    
+                        (4)
+                    </label>
+                </div>
+
+                <div class="review">
+                    <label for="puntaje">
+                        <input
+                            type="checkbox"
+                            name="review"
+                            class="filter review-filter"
+                            value="3"
+                            id="puntaje"
+                        />
+                        
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                        
+                        (3)
+                    </label>
+                </div>
+
+                <div class="review">
+                    <label for="puntaje">
+                        <input
+                            type="checkbox"
+                            name="review"
+                            class="filter review-filter"
+                            value="2"
+                            id="puntaje"
+                        />
+                        
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                        
+                            (2)
+                    </label>
+                </div>
+
+                <div class="review">
+                    <label for="puntaje">
+                        <input
+                            type="checkbox"
+                            name="review"
+                            class="filter review-filter"
+                            value="1"
+                            id="puntaje"
+                        />
+                        
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                        
+                        (1)
+                     </label>
+                </div>
+            </form>
+
+          </aside>
+
+
+
+        <div class="contenedor">
+            <div class="barra">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="contenedor-tarjetas">
+                <div class="tarjeta"></div>
+                <div class="tarjeta"></div>
+                <div class="tarjeta"></div>
+                <div class="tarjeta"></div>
+                <div class="tarjeta"></div>
+                <div class="tarjeta"></div>
+                <div class="tarjeta"></div>
+                <div class="tarjeta"></div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>

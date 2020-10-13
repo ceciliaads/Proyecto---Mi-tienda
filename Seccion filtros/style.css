@@ -1,38 +1,6 @@
 * {
     margin: 0;
 }
-
-#barra-de-navegacion {
-    background-color: blue;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px ;
-}
-
-#barra-de-navegacion>div {
-    background-color: blueviolet;
-    height: 50px;
-    width: 70px;
-    
-
-}
-
-.header {
-    background-color: chartreuse;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.header>.div-header {
-    background-color: crimson;
-    height: 80px;
-    width: 300px;
-}
-
-
 .seccion-principal {
     display: flex;
 }
@@ -98,20 +66,4 @@ form {
     width: 200px;
     margin: 10px;
     border: 1px solid black;
-}
-
-.footer {
-    background-color: lightcoral;
-    padding: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.contenedor-texto-footer {
-    background-color: lime;
-    height: 30px;
-    width: 400px;
-    text-align: center;
 }
