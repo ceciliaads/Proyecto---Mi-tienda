@@ -87,17 +87,31 @@ form {
 }
 
 .contenedor-tarjetas {
+    flex: 3;
      display: flex;
      justify-content: center;
      flex-wrap: wrap;
 }
 
-.tarjeta {
-    background-color: white;
-    height: 300px;
-    width: 200px;
+.producto {
+    background-color: #fff;
+    padding: 25px;
+    text-align: center;
     margin: 10px;
     border: 1px solid black;
+}
+  
+.producto-img-contenedor {
+    height: 250px;
+}
+  
+.producto-img {
+    height: 100%;
+    margin: 0 auto;
+}
+  
+.hidden {
+    display: none;
 }
 
 .footer {
