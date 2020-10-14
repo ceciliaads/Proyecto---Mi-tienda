@@ -10,6 +10,8 @@
 </head>
 <body>
 
+    <!-- BARRA DE NAVEGACION -->
+
     <div id="barra-de-navegacion">
 
         <div class="ceci-shop"></div>
@@ -17,21 +19,30 @@
 
     </div>
 
+    <!-- HEADER -->
+
     <header class="header">
       <div class="div-header"></div>
     </header>
 
+    <!-- SECCION PRINCIPAL -->
+
     <section class="seccion-principal">
 
+        <!-- ASIDE -->
+
         <aside class="aside">
+
+            <!-- FORMULARIO -->
 
             <form>
 
                 <div class="filtros">
-                    <h2>FILTROS</h2>
-                </div>
-                <div class="limpiar">
-                    <p>Limpiar</p>
+
+                    <label>Filtro</label>
+                
+                    <button class="boton-limpiar">limpiar</button>
+
                 </div>
 
                 <label for="busqueda"> <h3>BUSQUEDA</h3>
@@ -46,6 +57,8 @@
                     </div>    
                 </label>
 
+                <!-- CATEGORIAS -->
+
                 <h3>CATEGORIA<h3>
 
                 <div class="contenedor-categorias">
@@ -53,8 +66,9 @@
                         <input 
                         type="checkbox" 
                         name="categoria" 
-                        id="categorias" 
                         value="consolas"
+                        id="categorias"
+                        class="productos-categorias"
                         />
                         CONSOLAS
 
@@ -67,8 +81,8 @@
                         <input 
                         type="checkbox" 
                         name="categoria" 
-                        id="categorias" 
                         value="notebooks"
+                        class="productos-categorias"
                         />
                         NOTEBOOKS
                     </label>
@@ -79,8 +93,8 @@
                         <input 
                         type="checkbox" 
                         name="categoria" 
-                        id="categorias" 
                         value="camaras"
+                        class="productos-categorias"
                         />
                         CAMARAS
                     </label>
@@ -91,8 +105,8 @@
                         <input 
                         type="checkbox" 
                         name="categoria" 
-                        id="categorias" 
                         value="celulares"
+                        class="productos-categorias"
                         />
                         CELULARES
                     </label>
@@ -103,12 +117,14 @@
                         <input 
                         type="checkbox" 
                         name="categoria" 
-                        id="categorias" 
                         value="accesorios"
+                        class="productos-categorias"
                         />
                         ACCESORIOS
                     </label>
                 </div>
+
+                <!-- PUNTAJE -->
         
                 <h3 class="filter-name">PUNTAJE</h3>
 
@@ -214,6 +230,8 @@
 
         </aside>
 
+        <!-- CONTENEDOR GENERAL -->
+
         <div class="contenedor">
 
             <div class="barra">
@@ -221,8 +239,12 @@
                 <div></div>
             </div>
 
+            <!-- CONTENEDOR DE TARJETAS -->
+
 
             <div class="contenedor-tarjetas">
+
+                <!-- TARJETA CELULAR XIAOMI -->
                 
                 <article 
                     class="producto"
@@ -254,6 +276,8 @@
 
                 </article>
 
+                <!-- TARJETA PLAYSTATION 4 -->
+
                 <article 
                     class="producto"
                     data-nombre="playstation s4"
@@ -282,6 +306,8 @@
 
                 </article>
 
+                <!-- TARJETA CAMARA NIKON -->
+
                 <article class="producto"
                     data-nombre="camara nikon"
                     data-categoria="camaras"
@@ -308,6 +334,8 @@
                     </div>
 
                 </article>
+
+                <!-- TARJETA HEADPHONES SONY -->
 
 
                 <article 
@@ -339,6 +367,9 @@
                 </article>
 
 
+                <!-- TARJETA NINTENDO SWITCH -->
+
+
                 <article 
                     class="producto"
                     data-nombre="nintendo switch"
@@ -366,6 +397,9 @@
                     </div>
 
                 </article>
+
+                
+                <!-- TARJETA NOTEBOOK ASUS -->
 
 
                 <article class="producto"
@@ -396,6 +430,9 @@
                 </article>
 
 
+                <!-- TARJETA NOTEBOOK MSI -->
+
+
                 <article class="producto"
                     data-nombre="notebook msi"
                     data-categoria="notebooks"
@@ -422,6 +459,8 @@
                     </div>
 
                 </article>
+
+                <!-- TARJETA HEADPHONES PHILLIPS -->
 
                 <article class="producto"
                     data-nombre="headphones phillips"
@@ -450,6 +489,8 @@
 
                 </article>
 
+                <!-- TARJETA MACBOOK PRO -->
+
                 <article 
                     class="producto"
                     data-nombre="macbook pro"
@@ -477,6 +518,9 @@
                     </div>
 
                 </article>
+
+
+                <!-- TARJETA IPHONE 6 PLUS -->
 
 
                 <article 
@@ -508,6 +552,9 @@
                 </article>
 
 
+                <!-- TARJETA XBOX ONE -->
+
+
                 <article 
                     class="producto"
                     data-nombre="xbox one"
@@ -535,6 +582,9 @@
                     </div>
 
                 </article>
+
+
+                <!-- TARJETA MOUSE GAMER -->
 
 
                 <article 
@@ -570,6 +620,11 @@
         </div>
 
     </section>
+
+    <!-- FIN DE SECCION PRINCIPAL -->
+
+
+    <!-- FOOTER -->
 
     <footer class="footer">
 
