@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form>
+
+        
+
+        <button id="abrir-carrito">CARRITO</button>
+
+            
+        <div class="carrito">
+
+            <h3>Checkout</h3>
+
+            <h4>Datos Personales</h4>
+
+            <div>
+                <label for="nombre-completo">Nombre y apellido*
+                    <input 
+                    type="text"
+                    name="nombre-completo"
+                    placeholder="p. ej: Ada Lovelace"
+                    id="nombre-completo"
+                    />
+                </label>
+            </div>
+        
+            <div>
+                <label for="email">Email*
+                    <input 
+                    type="email"
+                    name="email"
+                    placeholder="p. ej: ada.lovelace@gmail.com"
+                    id="email"
+                    />
+                </label>
+            </div>
+
+            <hr/>
+
+            <h4>Opciones de pago</h4>
+
+            <div>
+                <label for="efectivo-debito">
+                    <input 
+                    type="radio"
+                    name="pago"
+                    value="efec-deb"
+                    id="efectivo-debito"
+                    />
+                    Efectivo / Debito
+                </label>
+            </div>
+            
+
+            <div>
+                <label for="tarjeta">
+                    <input 
+                    type="radio"
+                    name="pago"
+                    value="tarjeta"
+                    id="tarjeta"
+                    />
+                    Tarjeta de credito
+                </label>
+            </div>
+
+            <div>
+                <label for="envio">
+                    <input 
+                    type="checkbox"
+                    name="extras"
+                    value="envio"
+                    id="envio"
+                    />
+                    Necesito envio
+                </label>
+            </div>
+
+            <div>
+                <label for="descuento">
+                    <input 
+                    type="checkbox"
+                    name="extras"
+                    value="descuento"
+                    id="descuento"
+                    />
+                    Tengo tarjeta de descuento
+                </label>
+            </div>
+            
+            <div class="resumen-total">
+                <h4>Resumen</h4>
+
+                
+                <p>Subtotal</p>
+                <p id="recargo"></p>
+                <p id="subtotal">0</p>
+
+                <h2>Total:</h2>
+                <p id="total">0</p>
+
+            </div>
+
+            <button id="cerrar-carrito">Seguir comprando</button>
+            
+            <label for="finalizar-compra">
+                <input 
+                type="submit"
+                value="Finalizar"
+                id="finalizar-compra"
+                />
+            </label>
+            
+
+        </div>
+        
+       
+
+        
+
+    </form>
+
+    
+
+
+
+    <script src="index.js"></script>
+    
+</body>
+</html>
