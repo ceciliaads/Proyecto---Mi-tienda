@@ -18,18 +18,21 @@
 
 }
 
-.header {
-    background-color: chartreuse;
+.banner-principal {
     height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(../img/banner.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
-.header>.div-header {
-    background-color: crimson;
-    height: 80px;
-    width: 300px;
+.banner-principal>.titulo-banner{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -51,7 +54,9 @@ form {
     justify-content: space-around;
 }
 
-
+.barra-busqueda {
+    position: absolute;
+}
 
 .form-busqueda {
     border: none;
@@ -66,6 +71,12 @@ form {
     border-bottom: 2px solid darkslategray;
 }
 
+
+.fa-search {
+    position: relative;
+    right: 25px;
+    top: 2px;
+}
 
 .contenedor {
     background-color: tomato;
