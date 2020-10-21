@@ -42,7 +42,7 @@
 
 .aside {
     background-color: cyan;
-    width: 30%;
+    width: 20%;
     
 }
 
@@ -80,7 +80,7 @@ form {
 
 .contenedor {
     background-color: tomato;
-    width: 70%;
+    width: 80%;
 }
 
 .barra {
@@ -99,9 +99,10 @@ form {
 
 .contenedor-tarjetas {
     flex: 3;
-     display: flex;
-     justify-content: center;
-     flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
 }
 
 .producto {
@@ -110,15 +111,26 @@ form {
     text-align: center;
     margin: 10px;
     border: 1px solid black;
+    box-sizing: border-box;
+    
 }
   
 .producto-img-contenedor {
     height: 250px;
+    margin: 20px;
+    overflow: hidden;
+    
 }
-  
+
 .producto-img {
     height: 100%;
     margin: 0 auto;
+    transition: all 0.5s;
+    
+}
+
+.producto-img:hover {
+    transform: scale(1.5);
 }
   
 .hidden {
