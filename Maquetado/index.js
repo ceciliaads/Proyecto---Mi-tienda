@@ -1,103 +1,166 @@
-const filtroNombre = document.querySelector("#busqueda");
-const tarjetas = document.getElementsByClassName("producto");
+// const filtroNombre = document.querySelector("#busqueda");
+const filtroBusqueda = document.querySelector("#busqueda");
+const cards = document.getElementsByClassName("producto");
+// const tarjetas = document.getElementsByClassName("producto");
 const filtroRating = document.getElementsByClassName('review-filter');
 const filtroCategorias = document.getElementsByClassName('productos-categorias');
 const checkboxes = document.querySelectorAll(".review-filter")
 const botonLimpiar = document.getElementsByClassName("boton-limpiar")
  
+// FILTROS INPUT BUSQUEDA | SECCION CATEGORIAS | SECCION RATING \\
 
-// FILTRO BUSQUEDA //
 
-filtroNombre.oninput = () => {
-  for (let tarjeta of tarjetas) {
-    const titulo = tarjeta.dataset.nombre;
-    const busqueda = filtroNombre.value;
-    if (titulo.includes(busqueda)) {
-      tarjeta.classList.remove('hidden');
-    } else {
-      tarjeta.classList.add('hidden');
-    }
-  }
-};
-
-// FILTRO CATEGORIAS //
-
-for (let checkbox of filtroCategorias) {
-  checkbox.onclick = () => {
-    filtrarTarjetasPorCategoria();
-  };
-}
-
-const categoriaSeleccionada = () => {
-  for (let checkbox of filtroCategorias) {
-    if (checkbox.checked) {
-      return true;
-    }
-  }
-};
-
-const coincidenCategoriaYTarjeta = tarjeta => {
-  const categorias = tarjeta.dataset.categoria;
-  for (let checkbox of filtroCategorias) {
-    if (checkbox.value === categorias && checkbox.checked) {
-      return true;
-    }
-  }
-};
-
-const filtrarTarjetasPorCategoria = () => {
-  for (let tarjeta of tarjetas) {
-    tarjeta.classList.add('hidden');
-    if (categoriaSeleccionada()) {
-      if (coincidenCategoriaYTarjeta(tarjeta)) {
-        tarjeta.classList.remove('hidden');
+const pasaFiltroInput = (card) => {
+  if (hayAlgoEscritoEnElInput()) {
+      if(compararInputConTarjeta(card)){
+          return true
       }
-    }
-    else {
-      tarjeta.classList.remove('hidden')
-    }
+      else {
+          return false
+      }
   }
-};
-
-
-// FILTRO RAITING ESTRELLAS //
-
-for (let checkbox of filtroRating) {
-  checkbox.onclick = () => {
-    filtrarTarjetas();
-  };
+  else {
+      return true
+  }
 }
 
-const hayCheckboxSeleccionado = () => {
-  for (let checkbox of filtroRating) {
-    if (checkbox.checked) {
-      return true;
-    }
-  }
-};
 
-const coincidenCheckboxYTarjeta = tarjeta => {
-  const rating = tarjeta.dataset.rating;
-  for (let checkbox of filtroRating) {
-    if (checkbox.value === rating && checkbox.checked) {
-      return true;
-    }
+const pasaFiltroCategorias = (card) => {
+  if (hayAlgunCheckboxCategoriaChequeado()) {
+      if(compararCategoriasConTarjeta(card)){
+          return true
+      }
+      else {
+          return false
+      }
   }
-};
+  else {
+      return true
+  }
+}
+
+const pasaFiltroRating = (card) => {
+  if (hayAlgunCheckboxRatingChequeado()) {
+      if(compararRatingConTarjeta(card)){
+          return true
+      }
+      else {
+          return false
+      }
+  }
+  else {
+      return true
+  }
+}
+
+
+const pasaFiltros = (card) => {
+  if (pasaFiltroInput(card) && pasaFiltroCategorias(card) && pasaFiltroRating(card)){
+      return true
+  }
+  else {
+      return false
+  }
+}
+
+const compararCategoriasConTarjeta = (card) => {
+  for (let checkboxCategoria of filtroCategorias) {
+      if (checkboxCategoria.checked){
+          if (checkboxCategoria.value === card.dataset.categoria) { //|| checkbox.value === "todos"){
+              return true
+          }
+      }
+  }
+  return false
+}
+
+const compararRatingConTarjeta = (card) => {
+  for (let checkboxRating of filtroRating){
+      if (checkboxRating.checked){
+          if (checkboxRating.value === card.dataset.rating) { //|| checkboxRating.value === "i")
+              return true
+          }
+          
+      }
+      
+  }
+  return false
+
+}
+
+const compararInputConTarjeta = (card) => {
+  if (card.dataset.nombre.includes(filtroBusqueda.value.toLowerCase())) {
+    return true
+  }
+  else {
+    return false
+  }
+}
+
+const ocultarTarjeta = (card) => {
+  return card.classList.add("hidden")
+}
+
+const mostrarTarjeta = (card) => {
+   return card.classList.remove("hidden")
+}
 
 const filtrarTarjetas = () => {
-  for (let tarjeta of tarjetas) {
-    tarjeta.classList.add('hidden');
-    if (hayCheckboxSeleccionado()) {
-      if (coincidenCheckboxYTarjeta(tarjeta)) {
-        tarjeta.classList.remove('hidden');
-      }
+  for (let card of cards) {
+    if (pasaFiltros(card)) {
+      mostrarTarjeta(card)
     }
     else {
-      tarjeta.classList.remove('hidden')
+      ocultarTarjeta(card)
     }
   }
-};
+}
+
+
+const hayAlgoEscritoEnElInput = () => {
+  if (filtroBusqueda.value) {
+    return true
+  }
+  else {
+    return false
+  }
+}
+
+const hayAlgunCheckboxCategoriaChequeado = () => {
+  for (let checkboxCategoria of filtroCategorias) {
+    if (checkboxCategoria.checked) {
+      return true
+    }
+  }
+  return false
+}
+
+const hayAlgunCheckboxRatingChequeado = () => {
+  for (let checkboxRating of filtroRating) {
+    if (checkboxRating.checked) {
+      return true
+    }
+  }
+  return false
+}
+
+filtroBusqueda.oninput = () => {
+  filtrarTarjetas()
+
+}
+
+for (let checkboxCategoria of filtroCategorias) {
+  checkboxCategoria.oninput = () => {
+    filtrarTarjetas()
+  }
+}
+
+for (let checkboxRating of filtroRating) {
+  checkboxRating.oninput = () => {
+    filtrarTarjetas()
+  }
+}
+
 
 
 // BOTON LIMPIAR //
