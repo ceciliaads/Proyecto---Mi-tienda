@@ -1,13 +1,11 @@
-// const filtroNombre = document.querySelector("#busqueda");
 const filtroBusqueda = document.querySelector("#busqueda");
-const cards = document.getElementsByClassName("producto");
-// const tarjetas = document.getElementsByClassName("producto");
+const cards = document.getElementsByClassName("card-product");
 const filtroRating = document.getElementsByClassName('review-filter');
 const filtroCategorias = document.getElementsByClassName('productos-categorias');
 const checkboxes = document.querySelectorAll(".review-filter")
 const botonLimpiar = document.getElementsByClassName("boton-limpiar")
  
-// FILTROS INPUT BUSQUEDA | SECCION CATEGORIAS | SECCION RATING \\
+// //////////////////   FILTROS INPUT BUSQUEDA | SECCION CATEGORIAS | SECCION RATING   \\\\\\\\\\\\\\\\\\\\\
 
 
 const pasaFiltroInput = (card) => {
@@ -163,7 +161,7 @@ for (let checkboxRating of filtroRating) {
 
 
 
-// BOTON LIMPIAR //
+// ////////////////////////////   BOTON LIMPIAR   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 botonLimpiar.onclick = () => {
   filtroNombre.value = ""
@@ -171,4 +169,24 @@ botonLimpiar.onclick = () => {
     checkbox.checked = false 
   }
   tarjeta.classList.remove('hidden')
+}
+
+// ////////////////////////////  GRILLA | LISTA  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+const contenedorTarjetas = document.getElementById("contenedor-tarjetas ")
+const botonGrilla = document.getElementById("boton-grilla")
+const botonLista = document.getElementById("boton-lista")
+
+botonGrilla.onclick = () => {
+  contenedorTarjetas.classList.remove('lista')
+  contenedorTarjetas.classList.add("grilla")
+  console.log("hiciste click en grilla")
+
+}
+
+botonLista.onclick = () => {
+  contenedorTarjetas.classList.remove("grilla")
+  contenedorTarjetas.classList.add("lista")
+  console.log("hiciste click en lista")
+
 }

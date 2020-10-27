@@ -10,7 +10,8 @@
 </head>
 <body>
 
-    <!-- BARRA DE NAVEGACION -->
+    <!-- ----------------------------------------------------------------------------------
+        --------------------------- BARRA DE NAVEGACION ----------------------------------->
 
     <div id="barra-de-navegacion">
 
@@ -19,7 +20,8 @@
 
     </div>
 
-    <!-- HEADER -->
+    <!-- ---------------------------------------------------------------------------------
+        -------------------------------- HEADER ---------------------------------------------->
 
     <header class="banner-principal">
       <div class="titulo-banner">
@@ -27,15 +29,18 @@
       </div>
     </header>
 
-    <!-- SECCION PRINCIPAL -->
+    <!-- -------------------------------------------------------------------------------------------
+        -------------------------------- SECCION PRINCIPAL ---------------------------------------->
 
     <section class="seccion-principal">
 
-        <!-- ASIDE -->
+        <!-- ------------------------------------------------------------------------------------------
+            ------------------------------- ASIDE FILTROS ----------------------------------------->
 
         <aside class="aside">
 
-            <!-- FORMULARIO -->
+            <!-- -------------------------------------------------------------------------------------
+                ----------------------------- FORMULARIO ------------------------------------------->
 
             <form>
 
@@ -61,7 +66,8 @@
                     
                 </label>
 
-                <!-- CATEGORIAS -->
+                <!------------------------------------------------------------------------------------
+                    ---------------------------- CATEGORIAS ----------------------------------------->
 
                 <h3>CATEGORIA<h3>
 
@@ -128,7 +134,8 @@
                     </label>
                 </div>
 
-                <!-- PUNTAJE -->
+                <!-- --------------------------------------------------------------------------------
+                    ---------------------------------- PUNTAJE ------------------------------------>
         
                 <h3 class="filter-name">PUNTAJE</h3>
 
@@ -231,27 +238,43 @@
                      </label>
                 </div>
             </form>
+            <!------------------------------------------------------------------------------------------
+                ---------------------------- FIN DE FORMULARIO -------------------------------------- -->
 
         </aside>
 
-        <!-- CONTENEDOR GENERAL -->
+        <!-------------------------------------------------------------------------------------------------
+            -------------------------------- CONTENEDOR GENERAL ------------------------------------------>
 
-        <div class="contenedor">
+        <div class="contenedor-principal">
 
             <div class="barra">
-                <div></div>
-                <div></div>
+                <div class="contador-de-productos">
+                    <p>Mostrando 12 producto(s) de 12</p>
+                </div>
+                <div class="ver-como">
+                    <div>
+                        <p>Ver como</p>
+                    </div>
+                    <div id="boton-grilla">
+                        <i class="fas fa-th"></i>
+                    </div>
+                    <div id="boton-lista">
+                        <i class="fas fa-list"></i>
+                    </div>
+                </div>
             </div>
 
-            <!-- CONTENEDOR DE TARJETAS -->
+            <!-----------------------------------------------------------------------------------------------
+                ----------------------------- CONTENEDOR DE TARJETAS -------------------------------------->
 
 
-            <div class="contenedor-tarjetas">
+            <div id="contenedor-tarjetas" class="lista">
 
-                <!-- TARJETA CELULAR XIAOMI -->
+                <!------------------------ TARJETA CELULAR XIAOMI ------------------------------>
                 
                 <article 
-                    class="producto"
+                    class="card-product"
                     data-nombre="celular xiaomi"
                     data-categoria="celulares"
                     data-precio="22499"
@@ -272,6 +295,7 @@
                             <i class="far fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                     </div>
 
                     <div class="boton-comprar">
@@ -280,10 +304,10 @@
 
                 </article>
 
-                <!-- TARJETA PLAYSTATION 4 -->
+                <!----------------------------- TARJETA PLAYSTATION 4 -------------------------------->
 
                 <article 
-                    class="producto"
+                    class="card-product"
                     data-nombre="playstation s4"
                     data-categoria="consolas"
                     data-precio="59999"
@@ -310,9 +334,9 @@
 
                 </article>
 
-                <!-- TARJETA CAMARA NIKON -->
+                <!-- ----------------------------- TARJETA CAMARA NIKON ---------------------------------->
 
-                <article class="producto"
+                <article class="card-product"
                     data-nombre="camara nikon"
                     data-categoria="camaras"
                     data-precio="54999"
@@ -339,11 +363,11 @@
 
                 </article>
 
-                <!-- TARJETA HEADPHONES SONY -->
+                <!----------------------------------TARJETA HEADPHONES SONY ----------------------------------->
 
 
                 <article 
-                    class="producto"
+                    class="card-product"
                     data-nombre="headphones sony"
                     data-categoria="accesorios"
                     data-precio="22499"
@@ -371,11 +395,11 @@
                 </article>
 
 
-                <!-- TARJETA NINTENDO SWITCH -->
+                <!-- --------------------------------- TARJETA NINTENDO SWITCH -------------------------------->
 
 
                 <article 
-                    class="producto"
+                    class="card-product"
                     data-nombre="nintendo switch"
                     data-categoria="consolas"
                     data-precio="46999"
@@ -403,10 +427,10 @@
                 </article>
 
                 
-                <!-- TARJETA NOTEBOOK ASUS -->
+                <!--------------------------------- TARJETA NOTEBOOK ASUS ---------------------------------->
 
 
-                <article class="producto"
+                <article class="card-product"
                     data-nombre="notebook asus"
                     data-categoria="notebooks"
                     data-precio="32999"
@@ -434,10 +458,10 @@
                 </article>
 
 
-                <!-- TARJETA NOTEBOOK MSI -->
+                <!-------------------------------------- TARJETA NOTEBOOK MSI ------------------------------->
 
 
-                <article class="producto"
+                <article class="card-product"
                     data-nombre="notebook msi"
                     data-categoria="notebooks"
                     data-precio="37999"
@@ -464,9 +488,9 @@
 
                 </article>
 
-                <!-- TARJETA HEADPHONES PHILLIPS -->
+                <!------------------------------------ TARJETA HEADPHONES PHILLIPS -------------------------->
 
-                <article class="producto"
+                <article class="card-product"
                     data-nombre="headphones phillips"
                     data-categoria="accesorios"
                     data-precio="11999"
@@ -493,10 +517,10 @@
 
                 </article>
 
-                <!-- TARJETA MACBOOK PRO -->
+                <!--------------------------------------- TARJETA MACBOOK PRO -------------------------------->
 
                 <article 
-                    class="producto"
+                    class="card-product"
                     data-nombre="macbook pro"
                     data-categoria="notebooks"
                     data-precio="119999"
@@ -524,11 +548,11 @@
                 </article>
 
 
-                <!-- TARJETA IPHONE 6 PLUS -->
+                <!-- -------------------------------- TARJETA IPHONE 6 PLUS ------------------------------>
 
 
                 <article 
-                    class="producto"
+                    class="card-product"
                     data-nombre="iphone 6 plus"
                     data-categoria="celulares"
                     data-precio="79999"
@@ -556,11 +580,11 @@
                 </article>
 
 
-                <!-- TARJETA XBOX ONE -->
+                <!----------------------------------- TARJETA XBOX ONE ------------------------------------>
 
 
                 <article 
-                    class="producto"
+                    class="card-product"
                     data-nombre="xbox one"
                     data-categoria="consolas"
                     data-precio="69999"
@@ -588,11 +612,11 @@
                 </article>
 
 
-                <!-- TARJETA MOUSE GAMER -->
+                <!-------------------------------------- TARJETA MOUSE GAMER -------------------------------->
 
 
                 <article 
-                    class="producto"
+                    class="card-product"
                     data-nombre="mouse gamer"
                     data-categoria="accesorios"
                     data-precio="4999"
@@ -625,10 +649,12 @@
 
     </section>
 
-    <!-- FIN DE SECCION PRINCIPAL -->
+    <!-------------------------------------------------------------------------------------------------
+        -------------------------------- FIN DE SECCION PRINCIPAL ------------------------------------>
 
 
-    <!-- FOOTER -->
+    <!-------------------------------------------------------------------------------------------------
+        -------------------------------------- FOOTER ------------------------------------------------>
 
     <footer class="footer">
 
