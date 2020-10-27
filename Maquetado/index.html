@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Maquetado</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -15,8 +16,15 @@
 
     <div id="barra-de-navegacion">
 
-        <div class="ceci-shop"></div>
-        <div class="carrito"></div>
+        <div class="contenedor-logo-header">
+            <img src="../img/iso_blanco.svg"/>
+            <p>ADA SHOP - By CECI</p>
+        </div>
+        <div class="carrito">
+            <button class="icono-carrito"><i class="fas fa-shopping-cart"></i>
+            Carrito (<span class="productos-en-carrito"></span> items)
+            </button>
+        </div>
 
     </div>
 
@@ -24,9 +32,12 @@
         -------------------------------- HEADER ---------------------------------------------->
 
     <header class="banner-principal">
-      <div class="titulo-banner">
-          <p>ELECTRONICA</p>
+      <div class="overlay">
+        <div class="titulo-banner">
+            <p>ELECTRONICA</p>
+        </div>
       </div>
+      
     </header>
 
     <!-- -------------------------------------------------------------------------------------------
@@ -250,18 +261,18 @@
 
             <div class="barra">
                 <div class="contador-de-productos">
-                    <p>Mostrando 12 producto(s) de 12</p>
+                    <p>Mostrando <span class="productos-mostrados">12</span> producto(s) de 12</p>
                 </div>
                 <div class="ver-como">
                     <div>
                         <p>Ver como</p>
                     </div>
-                    <div id="boton-grilla">
+                    <button id="boton-grilla">
                         <i class="fas fa-th"></i>
-                    </div>
-                    <div id="boton-lista">
+                    </button>
+                    <button id="boton-lista">
                         <i class="fas fa-list"></i>
-                    </div>
+                    </button>
                 </div>
             </div>
 
@@ -269,7 +280,7 @@
                 ----------------------------- CONTENEDOR DE TARJETAS -------------------------------------->
 
 
-            <div id="contenedor-tarjetas" class="lista">
+            <div id="contenedor-tarjetas" class="grilla">
 
                 <!------------------------ TARJETA CELULAR XIAOMI ------------------------------>
                 
@@ -288,6 +299,7 @@
                     <div class="product-body">
                         <h3 class="nombre-producto">Celular Xiaomi</h3>
                         <p class="precio-producto">$ 22499</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -295,13 +307,10 @@
                             <i class="far fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
+                        <div class="boton-comprar">
+                            <button>Comprar</button>
+                        </div>
                     </div>
-
-                    <div class="boton-comprar">
-                        <button>Comprar</button>
-                    </div>
-
                 </article>
 
                 <!----------------------------- TARJETA PLAYSTATION 4 -------------------------------->
@@ -326,10 +335,12 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                    </div>
-
-                    <div class="boton-comprar">
-                        <button>Comprar</button>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
+                       
+                        <div class="boton-comprar">
+                            <button>Comprar</button>
+                        
+                        </div>
                     </div>
 
                 </article>
@@ -348,6 +359,7 @@
                     <div class="producto-body">
                         <h3 class="nombre-producto">Camara Nikon</h3>
                         <p class="precio-producto">$ 54999</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -355,11 +367,12 @@
                             <i class="far fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
+                        <div class="boton-comprar">
+                            <button>Comprar</button>
+                        </div>
                     </div>
 
-                    <div class="boton-comprar">
-                        <button>Comprar</button>
-                    </div>
+                    
 
                 </article>
 
@@ -379,6 +392,7 @@
                     <div class="producto-body">
                         <h3 class="nombre-producto">Headphones Sony</h3>
                         <p class="precio-producto">$ 22499</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -386,10 +400,9 @@
                             <i class="far fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                    </div>
-
-                    <div class="boton-comprar">
-                        <button>Comprar</button>
+                        <div class="boton-comprar">
+                            <button>Comprar</button>
+                        </div>
                     </div>
 
                 </article>
@@ -411,6 +424,7 @@
                     <div class="producto-body">
                         <h3 class="nombre-producto">Nintendo Switch</h3>
                         <p class="precio-producto">$ 46999</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -418,11 +432,12 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
+                        <div class="boton-comprar">
+                            <button>Comprar</button>
+                        </div>
                     </div>
 
-                    <div class="boton-comprar">
-                        <button>Comprar</button>
-                    </div>
+                    
 
                 </article>
 
@@ -442,6 +457,7 @@
                     <div class="producto-body">
                         <h3 class="nombre-producto">Notebook Asus</h3>
                         <p class="precio-producto">$ 32999</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
@@ -449,10 +465,9 @@
                             <i class="far fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                    </div>
-
-                    <div class="boton-comprar">
-                        <button>Comprar</button>
+                        <div class="boton-comprar">
+                            <button>Comprar</button>
+                        </div>
                     </div>
 
                 </article>
@@ -473,6 +488,7 @@
                     <div class="producto-body">
                         <h3 class="nombre-producto">Notebook MSI</h3>
                         <p class="precio-producto">$ 37999</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -480,12 +496,11 @@
                             <i class="far fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
+                        <div class="boton-comprar">
+                            <button>Comprar</button>
+                        </div>
                     </div>
-
-                    <div class="boton-comprar">
-                        <button>Comprar</button>
-                    </div>
-
+                    
                 </article>
 
                 <!------------------------------------ TARJETA HEADPHONES PHILLIPS -------------------------->
@@ -502,6 +517,7 @@
                     <div class="producto-body">
                         <h3 class="nombre-producto">Headphones Phillips</h3>
                         <p class="precio-producto">$ 11999</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -509,11 +525,12 @@
                             <i class="far fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
+                        <div class="boton-comprar">
+                            <button>Comprar</button>
+                        </div>
                     </div>
 
-                    <div class="boton-comprar">
-                        <button>Comprar</button>
-                    </div>
+                  
 
                 </article>
 
@@ -532,6 +549,7 @@
                     <div class="producto-body">
                         <h3 class="nombre-producto">Macbook Pro</h3>
                         <p class="precio-producto">$ 119999</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -539,10 +557,9 @@
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                    </div>
-
-                    <div class="boton-comprar">
-                        <button>Comprar</button>
+                        <div class="boton-comprar">
+                            <button>Comprar</button>
+                        </div>
                     </div>
 
                 </article>
@@ -564,6 +581,7 @@
                     <div class="producto-body">
                         <h3 class="nombre-producto">Iphone 6 Plus</h3>
                         <p class="precio-producto">$ 79999</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -571,10 +589,9 @@
                             <i class="far fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                    </div>
-
-                    <div class="boton-comprar">
-                        <button>Comprar</button>
+                        <div class="boton-comprar">
+                            <button>Comprar</button>
+                        </div>
                     </div>
 
                 </article>
@@ -596,6 +613,7 @@
                     <div class="producto-body">
                         <h3 class="nombre-producto">Xbox One</h3>
                         <p class="precio-producto">$ 69999</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -603,10 +621,9 @@
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                    </div>
-
-                    <div class="boton-comprar">
-                        <button>Comprar</button>
+                        <div class="boton-comprar">
+                            <button>Comprar</button>
+                        </div>
                     </div>
 
                 </article>
@@ -628,6 +645,7 @@
                     <div class="producto-body">
                         <h3 class="nombre-producto">Mouse Gamer</h3>
                         <p class="precio-producto">$ 4999</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -635,10 +653,9 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                    </div>
-
-                    <div class="boton-comprar">
-                        <button>Comprar</button>
+                        <div class="boton-comprar">
+                            <button>Comprar</button>
+                        </div>
                     </div>
 
                 </article>
@@ -659,7 +676,8 @@
     <footer class="footer">
 
         <div class="contenedor-texto-footer">
-            <p>CECI SHOP - Gracias por visitarnos 🤍</p>
+            <img src="../img/iso_blanco.svg"/>
+            <p>ADA SHOP by CECI - Gracias por visitarnos 💛</p>
         </div>
 
     </footer>

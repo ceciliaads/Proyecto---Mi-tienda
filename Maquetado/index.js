@@ -173,7 +173,7 @@ botonLimpiar.onclick = () => {
 
 // ////////////////////////////  GRILLA | LISTA  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-const contenedorTarjetas = document.getElementById("contenedor-tarjetas ")
+const contenedorTarjetas = document.getElementById("contenedor-tarjetas")
 const botonGrilla = document.getElementById("boton-grilla")
 const botonLista = document.getElementById("boton-lista")
 
