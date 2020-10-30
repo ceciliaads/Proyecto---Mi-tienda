@@ -1,12 +1,43 @@
+
+// ////////////////// CARRITO \\\\\\\\\\\\\\\\\\\\\
+
+const botonAbrirMenu = document.getElementById("abrir-menu")
+const botonCerrarMenu = document.getElementById("cerrar-menu")
+const menu = document.getElementById("menu")
+const overlay = document.getElementById("overlay-general")
+const rojo = document.querySelector(".rojo")
+
+botonAbrirMenu.onclick = () => {
+  overlay.classList.remove("ocultar")
+  document.body.classList.add("no-scroll")
+  menu.classList.add("mostrar-menu")
+}
+
+botonCerrarMenu.onclick = () => {
+  overlay.classList.add("ocultar")
+  document.body.classList.remove("no-scroll")
+  menu.classList.remove("mostrar-menu")
+}
+
+
+// ////////////////// CONTADOR DE PRODUCTOS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+// const contador = document.querySelector(".productos-mostrados")
+
+// const contadorDeProductosMostrados = () => {
+//   if (pasaFiltros(card)){}
+// }
+
+// contadorDeProductosMostrados()
+
+ 
+// //////////////////   FILTROS INPUT BUSQUEDA | SECCION CATEGORIAS | SECCION RATING   \\\\\\\\\\\\\\\\\\\\\
 const filtroBusqueda = document.querySelector("#busqueda");
 const cards = document.getElementsByClassName("card-product");
 const filtroRating = document.getElementsByClassName('review-filter');
 const filtroCategorias = document.getElementsByClassName('productos-categorias');
 const checkboxes = document.querySelectorAll(".review-filter")
 const botonLimpiar = document.getElementsByClassName("boton-limpiar")
- 
-// //////////////////   FILTROS INPUT BUSQUEDA | SECCION CATEGORIAS | SECCION RATING   \\\\\\\\\\\\\\\\\\\\\
-
 
 const pasaFiltroInput = (card) => {
   if (hayAlgoEscritoEnElInput()) {
@@ -163,7 +194,8 @@ for (let checkboxRating of filtroRating) {
 
 // ////////////////////////////   BOTON LIMPIAR   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-botonLimpiar.onclick = () => {
+botonLimpiar.onclick = (e) => {
+  e.preventdefault()
   filtroNombre.value = ""
   for (let checkbox of checkboxes) {
     checkbox.checked = false 

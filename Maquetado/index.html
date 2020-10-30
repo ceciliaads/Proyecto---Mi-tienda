@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Maquetado</title>
+    <title>ADA SHOP by CECI</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/ico" href="../favicon.ico">
 
 </head>
 <body>
@@ -14,14 +15,16 @@
     <!-- ----------------------------------------------------------------------------------
         --------------------------- BARRA DE NAVEGACION ----------------------------------->
 
-    <div id="barra-de-navegacion">
+     <div class="overlay-general ocultar" id="overlay-general"></div>
+        
+    <div class="barra-de-navegacion">
 
         <div class="contenedor-logo-header">
-            <img src="../img/iso_blanco.svg"/>
+            <img role="img" src="../img/iso_blanco.svg"/>
             <p>ADA SHOP - By CECI</p>
         </div>
         <div class="carrito">
-            <button class="icono-carrito"><i class="fas fa-shopping-cart"></i>
+            <button id="abrir-menu" class="icono-carrito"><i role="img" class="fas fa-shopping-cart"></i>
             Carrito (<span class="productos-en-carrito"></span> items)
             </button>
         </div>
@@ -41,9 +44,93 @@
     </header>
 
     <!-- -------------------------------------------------------------------------------------------
+        -------------------------------- SECCION CARRITO ---------------------------------------->
+    <section>
+
+        <div id="menu" class="menu">
+
+            <div class="contenedor-cerrar-carrito">
+                <h3>Carrito</h3>
+                <button id="cerrar-menu"><i role="img" class="fas fa-times"></i></button>
+            </div>
+            
+            <p><span class="productos-en-carrito">2</span> producto(s) agregado(s)</p>
+    
+            <!------------------------ TARJETA CELULAR XIAOMI ------------------------------>
+                
+            <article 
+            class="card-product-carrito"
+            data-nombre="celular xiaomi"
+            data-categoria="celulares"
+            data-precio="22499"
+            data-rating="3"
+            >
+
+                <div class="contenedor-img-carrito">
+                    <img alt="celular xiaomi" src="../img/xiaomi.jpg" class="producto-img-carrito" />
+                    
+                </div>
+
+                <div class="product-body">
+                    <h3 class="nombre-producto">Celular Xiaomi</h3>
+
+                    <div class="boton-eliminar">
+                        <button><i role="img" class="far fa-trash-alt"></i></button>
+                    </div>
+
+                    <label><input type="number" value="1" />
+                        <div>unidades</div>
+                    </label>
+
+                    <p class="precio-producto">$ 22499</p>
+                    
+                </div>
+            </article>
+
+         <!----------------------------- TARJETA PLAYSTATION 4 -------------------------------->
+
+            <article 
+                class="card-product-carrito"
+                data-nombre="playstation s4"
+                data-categoria="consolas"
+                data-precio="59999"
+                data-rating="5"
+                >
+                <div class="contenedor-img-carrito">
+                    <img alt="playstation 4" src="../img/ps4.jpg" class="producto-img-carrito" />
+                </div>
+                <div class="producto-body">
+                    <h3 class="nombre-producto">PlayStation 4</h3>
+
+                    <div class="boton-eliminar">
+                        <button><i role="img" class="far fa-trash-alt"></i></button>
+                    </div>
+
+                    <label><input type="number" value="1" />
+                        <div>unidades</div>
+                    </label>
+
+                    <p class="precio-producto">$ 59999</p>
+
+                
+                </div>
+
+            </article>
+            <div>
+                <p>Subtotal $82498</p>
+                <button class="boton-comprar-carrito">Comprar</button>
+                <button class="boton-vaciar">Vaciar</button>
+            </div>
+            
+
+        </div>
+            
+    </section>
+
+    <!-- -------------------------------------------------------------------------------------------
         -------------------------------- SECCION PRINCIPAL ---------------------------------------->
 
-    <section class="seccion-principal">
+    <main class="seccion-principal">
 
         <!-- ------------------------------------------------------------------------------------------
             ------------------------------- ASIDE FILTROS ----------------------------------------->
@@ -53,7 +140,7 @@
             <!-- -------------------------------------------------------------------------------------
                 ----------------------------- FORMULARIO ------------------------------------------->
 
-            <form>
+            <form class="formulario-filtros">
 
                 <div class="filtros">
 
@@ -72,7 +159,7 @@
                         id="busqueda" 
                         placeholder="Buscar productos" 
                         />
-                        <i class="fas fa-search"></i>
+                        <i role="img" class="fas fa-search"></i>
                     </div>
                     
                 </label>
@@ -160,11 +247,11 @@
                             id="puntaje"
                         />
                 
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i role="img" class="fas fa-star" aria-hidden="true"></i>
+                        <i role="img" class="fas fa-star" aria-hidden="true"></i>
+                        <i role="img" class="fas fa-star" aria-hidden="true"></i>
+                        <i role="img" class="fas fa-star" aria-hidden="true"></i>
+                        <i role="img" class="fas fa-star" aria-hidden="true"></i>
                         (5)
                     </label>
                 </div>
@@ -179,11 +266,11 @@
                             id="puntaje"
                         />
                 
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i role="img" class="fas fa-star" aria-hidden="true"></i>
+                        <i role="img" class="fas fa-star" aria-hidden="true"></i>
+                        <i role="img" class="fas fa-star" aria-hidden="true"></i>
+                        <i role="img" class="fas fa-star" aria-hidden="true"></i>
+                        <i role="img" class="far fa-star" aria-hidden="true"></i>
                     
                         (4)
                     </label>
@@ -199,11 +286,11 @@
                             id="puntaje"
                         />
                         
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="far fa-star" aria-hidden="true"></i>
-                            <i class="far fa-star" aria-hidden="true"></i>
+                            <i role="img" class="fas fa-star" aria-hidden="true"></i>
+                            <i role="img" class="fas fa-star" aria-hidden="true"></i>
+                            <i role="img" class="fas fa-star" aria-hidden="true"></i>
+                            <i role="img" class="far fa-star" aria-hidden="true"></i>
+                            <i role="img" class="far fa-star" aria-hidden="true"></i>
                         
                         (3)
                     </label>
@@ -219,11 +306,11 @@
                             id="puntaje"
                         />
                         
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="far fa-star" aria-hidden="true"></i>
-                            <i class="far fa-star" aria-hidden="true"></i>
-                            <i class="far fa-star" aria-hidden="true"></i>
+                            <i role="img" class="fas fa-star" aria-hidden="true"></i>
+                            <i role="img" class="fas fa-star" aria-hidden="true"></i>
+                            <i role="img" class="far fa-star" aria-hidden="true"></i>
+                            <i role="img" class="far fa-star" aria-hidden="true"></i>
+                            <i role="img" class="far fa-star" aria-hidden="true"></i>
                         
                             (2)
                     </label>
@@ -239,11 +326,11 @@
                             id="puntaje"
                         />
                         
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="far fa-star" aria-hidden="true"></i>
-                            <i class="far fa-star" aria-hidden="true"></i>
-                            <i class="far fa-star" aria-hidden="true"></i>
-                            <i class="far fa-star" aria-hidden="true"></i>
+                            <i role="img" class="fas fa-star" aria-hidden="true"></i>
+                            <i role="img" class="far fa-star" aria-hidden="true"></i>
+                            <i role="img" class="far fa-star" aria-hidden="true"></i>
+                            <i role="img" class="far fa-star" aria-hidden="true"></i>
+                            <i role="img" class="far fa-star" aria-hidden="true"></i>
                         
                         (1)
                      </label>
@@ -268,10 +355,13 @@
                         <p>Ver como</p>
                     </div>
                     <button id="boton-grilla">
-                        <i class="fas fa-th"></i>
+                        <i role="img" class="fas fa-th"></i>
                     </button>
+
+                    <!-- No se por que los filtros no funcionan cuando estan en lista -->
+
                     <button id="boton-lista">
-                        <i class="fas fa-list"></i>
+                        <i role="img" class="fas fa-list"></i>
                     </button>
                 </div>
             </div>
@@ -293,7 +383,7 @@
                     >
 
                     <div class="producto-img-contenedor">
-                        <img src="../img/xiaomi.jpg" class="producto-img" />
+                        <img alt="celular xiaomi" src="../img/xiaomi.jpg" class="producto-img" />
                     </div>
 
                     <div class="product-body">
@@ -301,11 +391,11 @@
                         <p class="precio-producto">$ 22499</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="far fa-star"></i>
+                            <i role="img" class="far fa-star"></i>
                         </div>
                         <div class="boton-comprar">
                             <button>Comprar</button>
@@ -323,17 +413,17 @@
                     data-rating="5"
                     >
                     <div class="producto-img-contenedor">
-                        <img src="../img/ps4.jpg" class="producto-img" />
+                        <img alt="playstation 4" src="../img/ps4.jpg" class="producto-img" />
                     </div>
                     <div class="producto-body">
                         <h3 class="nombre-producto">PlayStation 4</h3>
                         <p class="precio-producto">$ 59999</p>
                         <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
                         </div>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                        
@@ -354,18 +444,18 @@
                     data-rating="2"
                     >
                     <div class="producto-img-contenedor">
-                        <img src="../img/nikon.jpg" class="producto-img" />
+                        <img alt="camara nikon" src="../img/nikon.jpg" class="producto-img" />
                     </div>
                     <div class="producto-body">
                         <h3 class="nombre-producto">Camara Nikon</h3>
                         <p class="precio-producto">$ 54999</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="far fa-star"></i>
+                            <i role="img" class="far fa-star"></i>
+                            <i role="img" class="far fa-star"></i>
                         </div>
                         <div class="boton-comprar">
                             <button>Comprar</button>
@@ -387,18 +477,18 @@
                     data-rating="3"
                     >
                     <div class="producto-img-contenedor">
-                        <img src="../img/sony.png" class="producto-img" />
+                        <img alt="headphones sony" src="../img/sony.png" class="producto-img" />
                     </div>
                     <div class="producto-body">
                         <h3 class="nombre-producto">Headphones Sony</h3>
                         <p class="precio-producto">$ 22499</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="far fa-star"></i>
+                            <i role="img" class="far fa-star"></i>
                         </div>
                         <div class="boton-comprar">
                             <button>Comprar</button>
@@ -419,18 +509,18 @@
                     data-rating="5"
                     >
                     <div class="producto-img-contenedor">
-                        <img src="../img/switch.jpg" class="producto-img" />
+                        <img alt="nintendo switch" src="../img/switch.jpg" class="producto-img" />
                     </div>
                     <div class="producto-body">
                         <h3 class="nombre-producto">Nintendo Switch</h3>
                         <p class="precio-producto">$ 46999</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
                         </div>
                         <div class="boton-comprar">
                             <button>Comprar</button>
@@ -452,18 +542,18 @@
                     data-rating="1"
                     >
                     <div class="producto-img-contenedor">
-                        <img src="../img/asus.png" class="producto-img" />
+                        <img alt="notebook asus" src="../img/asus.png" class="producto-img" />
                     </div>
                     <div class="producto-body">
                         <h3 class="nombre-producto">Notebook Asus</h3>
                         <p class="precio-producto">$ 32999</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="far fa-star"></i>
+                            <i role="img" class="far fa-star"></i>
+                            <i role="img" class="far fa-star"></i>
+                            <i role="img" class="far fa-star"></i>
                         </div>
                         <div class="boton-comprar">
                             <button>Comprar</button>
@@ -483,18 +573,18 @@
                     data-rating="3"
                     >
                     <div class="producto-img-contenedor">
-                        <img src="../img/msi.png" class="producto-img" />
+                        <img alt="notebook msi" src="../img/msi.png" class="producto-img" />
                     </div>
                     <div class="producto-body">
                         <h3 class="nombre-producto">Notebook MSI</h3>
                         <p class="precio-producto">$ 37999</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="far fa-star"></i>
+                            <i role="img" class="far fa-star"></i>
                         </div>
                         <div class="boton-comprar">
                             <button>Comprar</button>
@@ -512,18 +602,18 @@
                     data-rating="2"
                     >
                     <div class="producto-img-contenedor">
-                        <img src="../img/headphones.png" class="producto-img" />
+                        <img alt="headphones phillips" src="../img/headphones.png" class="producto-img" />
                     </div>
                     <div class="producto-body">
                         <h3 class="nombre-producto">Headphones Phillips</h3>
                         <p class="precio-producto">$ 11999</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="far fa-star"></i>
+                            <i role="img" class="far fa-star"></i>
+                            <i role="img" class="far fa-star"></i>
                         </div>
                         <div class="boton-comprar">
                             <button>Comprar</button>
@@ -544,18 +634,18 @@
                     data-rating="4"
                     >
                     <div class="producto-img-contenedor">
-                        <img src="../img/macbook.png" class="producto-img" />
+                        <img alt="macbook pro" src="../img/macbook.png" class="producto-img" />
                     </div>
                     <div class="producto-body">
                         <h3 class="nombre-producto">Macbook Pro</h3>
                         <p class="precio-producto">$ 119999</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="far fa-star"></i>
                         </div>
                         <div class="boton-comprar">
                             <button>Comprar</button>
@@ -576,18 +666,18 @@
                     data-rating="3"
                     >
                     <div class="producto-img-contenedor">
-                        <img src="../img/iphone.jpeg" class="producto-img" />
+                        <img alt="iphone 6 plus" src="../img/iphone.jpeg" class="producto-img" />
                     </div>
                     <div class="producto-body">
                         <h3 class="nombre-producto">Iphone 6 Plus</h3>
                         <p class="precio-producto">$ 79999</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="far fa-star"></i>
+                            <i role="img" class="far fa-star"></i>
                         </div>
                         <div class="boton-comprar">
                             <button>Comprar</button>
@@ -608,18 +698,18 @@
                     data-rating="4"
                     >
                     <div class="producto-img-contenedor">
-                        <img src="../img/xbox.jpg" class="producto-img" />
+                        <img alt="xbox one" src="../img/xbox.jpg" class="producto-img" />
                     </div>
                     <div class="producto-body">
                         <h3 class="nombre-producto">Xbox One</h3>
                         <p class="precio-producto">$ 69999</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="far fa-star"></i>
                         </div>
                         <div class="boton-comprar">
                             <button>Comprar</button>
@@ -640,18 +730,18 @@
                     data-rating="5"
                     >
                     <div class="producto-img-contenedor">
-                        <img src="../img/mouse.jpg" class="producto-img" />
+                        <img alt="mouse gamer" src="../img/mouse.jpg" class="producto-img" />
                     </div>
                     <div class="producto-body">
                         <h3 class="nombre-producto">Mouse Gamer</h3>
                         <p class="precio-producto">$ 4999</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim distinctio perferendis, sed eos, fugiat cum quos eaque inventore possimus commodi beatae veritatis illum, omnis totam sint fugit. Ratione, cupiditate?</p>
                         <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
+                            <i role="img" class="fas fa-star"></i>
                         </div>
                         <div class="boton-comprar">
                             <button>Comprar</button>
@@ -664,7 +754,7 @@
             </div>
         </div>
 
-    </section>
+    </main>
 
     <!-------------------------------------------------------------------------------------------------
         -------------------------------- FIN DE SECCION PRINCIPAL ------------------------------------>
@@ -676,7 +766,7 @@
     <footer class="footer">
 
         <div class="contenedor-texto-footer">
-            <img src="../img/iso_blanco.svg"/>
+            <img role="img" src="../img/iso_blanco.svg"/>
             <p>ADA SHOP by CECI - Gracias por visitarnos 💛</p>
         </div>
 
