@@ -1,43 +1,78 @@
 
-// ////////////////// CARRITO \\\\\\\\\\\\\\\\\\\\\
-
-const botonAbrirMenu = document.getElementById("abrir-menu")
-const botonCerrarMenu = document.getElementById("cerrar-menu")
-const menu = document.getElementById("menu")
+////// CARRITO \\\\\\
+const botonAbrirCarrito = document.getElementById("abrir-carrito")
+const botonCerrarCarrito = document.getElementById("cerrar-carrito")
+const carrito = document.getElementById("carrito")
 const overlay = document.getElementById("overlay-general")
 const rojo = document.querySelector(".rojo")
 
-botonAbrirMenu.onclick = () => {
-  overlay.classList.remove("ocultar")
-  document.body.classList.add("no-scroll")
-  menu.classList.add("mostrar-menu")
-}
-
-botonCerrarMenu.onclick = () => {
-  overlay.classList.add("ocultar")
-  document.body.classList.remove("no-scroll")
-  menu.classList.remove("mostrar-menu")
-}
-
-
-// ////////////////// CONTADOR DE PRODUCTOS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
-// const contador = document.querySelector(".productos-mostrados")
-
-// const contadorDeProductosMostrados = () => {
-//   if (pasaFiltros(card)){}
-// }
-
-// contadorDeProductosMostrados()
-
- 
-// //////////////////   FILTROS INPUT BUSQUEDA | SECCION CATEGORIAS | SECCION RATING   \\\\\\\\\\\\\\\\\\\\\
+///////  FILTROS INPUT BUSQUEDA | SECCION CATEGORIAS | SECCION RATING | LIMPIAR FILTROS \\\\\\\
 const filtroBusqueda = document.querySelector("#busqueda");
 const cards = document.getElementsByClassName("card-product");
 const filtroRating = document.getElementsByClassName('review-filter');
 const filtroCategorias = document.getElementsByClassName('productos-categorias');
-const checkboxes = document.querySelectorAll(".review-filter")
-const botonLimpiar = document.getElementsByClassName("boton-limpiar")
+const botonLimpiar = document.getElementById("boton-limpiar")
+
+//////  GRILLA | LISTA  \\\\\\\
+const contenedorTarjetas = document.getElementById("contenedor-tarjetas")
+const botonGrilla = document.getElementById("boton-grilla")
+const botonLista = document.getElementById("boton-lista")
+
+
+
+////// CARRITO \\\\\\
+
+botonAbrirCarrito.onclick = () => {
+  overlay.classList.remove("ocultar")
+  document.body.classList.add("no-scroll")
+  carrito.classList.add("mostrar-carrito")
+}
+
+botonCerrarCarrito.onclick = () => {
+  overlay.classList.add("ocultar")
+  document.body.classList.remove("no-scroll")
+  carrito.classList.remove("mostrar-carrito")
+}
+
+
+//////// CONTADOR DE PRODUCTOS \\\\\\\
+
+// const tarjetasOcultas = document.querySelector(".card-product .hidden")
+// const contador = document.querySelector(".productos-mostrados")
+
+// // let cantidadTarjetasOcultas = tarjetasOcultas.length
+// let cantidadTarjetasMostradas = 12 - cantidadTarjetasOcultas
+
+// const tarjetasOcultas = () => {
+//   for (let card of card){
+//     if (card.checked){
+//       return false
+//     }
+//   }
+//   let cantidadTarjetasOcultas = tarjetasOcultas.length
+// }
+
+
+
+
+
+
+
+// const actualizarCantidadDeProductosMostrados = () => {
+//   for (let card of cards) {
+//     if (card.checked){
+//       return false
+//     }
+//   }
+  
+
+// }
+
+
+
+ 
+///////  FILTROS INPUT BUSQUEDA | SECCION CATEGORIAS | SECCION RATING | LIMPIAR FILTROS \\\\\\\
+
 
 const pasaFiltroInput = (card) => {
   if (hayAlgoEscritoEnElInput()) {
@@ -192,22 +227,24 @@ for (let checkboxRating of filtroRating) {
 
 
 
-// ////////////////////////////   BOTON LIMPIAR   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+///////   BOTON LIMPIAR   \\\\\\\\
 
 botonLimpiar.onclick = (e) => {
-  e.preventdefault()
-  filtroNombre.value = ""
-  for (let checkbox of checkboxes) {
-    checkbox.checked = false 
+  e.preventDefault()
+  filtroBusqueda.value = ""
+  for (let card of cards) {
+    card.classList.remove('hidden')
   }
-  tarjeta.classList.remove('hidden')
+  for (let checkboxCategoria of filtroCategorias) {
+    checkboxCategoria.checked = false 
+  }
+  for (let checkboxRating of filtroRating){
+    checkboxRating.checked = false
+  }
+  
 }
 
-// ////////////////////////////  GRILLA | LISTA  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
-const contenedorTarjetas = document.getElementById("contenedor-tarjetas")
-const botonGrilla = document.getElementById("boton-grilla")
-const botonLista = document.getElementById("boton-lista")
+//////  GRILLA | LISTA  \\\\\\\
 
 botonGrilla.onclick = () => {
   contenedorTarjetas.classList.remove('lista')

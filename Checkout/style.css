@@ -4,9 +4,6 @@
 }
 
 
-.contenedor-principal {
-    width: 60%;
-}
 .carrito {
     border: 1px solid red;
     width: 600px;
@@ -14,9 +11,14 @@
     display: flex;
     padding: 30px;
 }
-  
-.ocultar {
-    display: none;
+
+.contenedor-principal {
+    width: 60%;
+}  
+
+.form-checkout {
+    border: none;
+    border-bottom: 1px solid #616060;
 }
 
 .resumen-total {
@@ -35,7 +37,7 @@
     font-size: 15px;
     width: 180px;
     height: 50px;
-    border: 1 solid red
+    border: 1px solid red
     
 
 }
@@ -50,4 +52,8 @@
     width: 180px;
     height: 50px;
 
+}
+
+.ocultar {
+    display: none;
 }
