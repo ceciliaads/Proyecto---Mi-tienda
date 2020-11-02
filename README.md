@@ -1,4 +1,4 @@
-# Mi Tienda E-Commerce
+# Mi Tienda Online
 
 ## En este proyecto se podran ver mis conocimientos adquiridos en el segundo modulo del programa del curso Front-end de ADA.
 
