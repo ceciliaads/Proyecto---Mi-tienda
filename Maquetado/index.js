@@ -6,6 +6,24 @@ const carrito = document.getElementById("carrito")
 const overlay = document.getElementById("overlay-general")
 const rojo = document.querySelector(".rojo")
 
+////// MODAL VACIAR \\\\\\
+const botonVaciarCarrito = document.querySelector(".boton-vaciar-carrito")
+const modalVaciar = document.querySelector(".modal-vaciar")
+const botonCancelar = document.querySelector(".boton-cancelar")
+const botonVaciarConfirmacion = document.querySelector(".boton-vaciar")
+
+////// CHECKOUT \\\\\\
+const checkout = document.querySelector(".checkout")
+const subtotal = document.querySelector("#subtotal")
+const total = document.querySelector("#total")
+const recargoParrafo = document.querySelector("#recargo")
+const recargoParrafoEnvio = document.querySelector("#recargo-envio")
+const radioTarjeta = document.querySelector("#tarjeta")
+const envio = document.getElementById("envio")
+const botonMostrarCheckout = document.querySelector("#abrir-checkout")
+const botonOcultarCheckout = document.querySelector("#cerrar-checkout")
+const botonFinalizarCompra = document.querySelector(".finalizar-compra")
+
 ///////  FILTROS INPUT BUSQUEDA | SECCION CATEGORIAS | SECCION RATING | LIMPIAR FILTROS \\\\\\\
 const filtroBusqueda = document.querySelector("#busqueda");
 const cards = document.getElementsByClassName("card-product");
@@ -34,6 +52,50 @@ botonCerrarCarrito.onclick = () => {
   carrito.classList.remove("mostrar-carrito")
 }
 
+////// MODAL VACIAR \\\\\\
+
+botonVaciarCarrito.onclick = () => {
+  modalVaciar.classList.remove("hidden")
+}
+
+botonVaciarConfirmacion.onclick = () => {
+  modalVaciar.classList.add("hidden")
+}
+
+botonCancelar.onclick = () => {
+  modalVaciar.classList.add("hidden")
+}
+
+////// CHECKOUT \\\\\\
+
+const subtotalProductos = 82498
+
+checkout.classList.add("ocultar")
+
+botonMostrarCheckout.onclick = (e) => {
+    e.preventDefault();
+  subtotal.textContent = subtotalProductos
+ checkout.classList.remove("ocultar")
+}
+
+botonOcultarCheckout.onclick = (e) => {
+    e.preventDefault();
+  checkout.classList.add("ocultar")
+}
+
+radioTarjeta.onclick = () => {
+    
+  const recargo = subtotalProductos * 0.1
+  recargoParrafo.textContent = recargo
+  total.textContent = subtotalProductos + recargo
+}
+
+envio.onclick = () => {
+  const recargoEnvio = subtotalProductos + 50
+  recargoParrafoEnvio.textContent = recargoEnvio
+  total.textContent = subtotalProductos + recargoEnvio
+}
+
 
 //////// CONTADOR DE PRODUCTOS \\\\\\\
 
@@ -51,10 +113,6 @@ botonCerrarCarrito.onclick = () => {
 //   }
 //   let cantidadTarjetasOcultas = tarjetasOcultas.length
 // }
-
-
-
-
 
 
 
