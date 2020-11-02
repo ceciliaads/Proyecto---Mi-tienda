@@ -139,6 +139,7 @@ button {
     
     background-color: white;
     position: absolute;
+    position: fixed;
     top: 100px;
     left: 500px;
     text-align: center;
@@ -619,8 +620,9 @@ No pude hacer que funcione el overlay que lleva el banner*/
     .boton-vaciar-carrito {
         
         background-color: white;
-       
     } 
+
+ 
     
  /* ASIDE  */
     .aside{
@@ -753,46 +755,7 @@ No pude hacer que funcione el overlay que lleva el banner*/
         } 
 
 
-     /* MODAL VACIAR */
-    .modal-vaciar{
-        width: 400px;
-        
-        background-color: white;
-        position: absolute;
-        top: 100px;
-        right: -100px;
-        text-align: center;
-        padding: 30px;
-        z-index: 3 ;
-    }
-    /* .modal-vaciar>h3{
-        font-size: 30px;
-    }
-    
-    .contenedor-botones-modal{
-        padding-top: 40px;
-    }
-    
-    .boton-cancelar{
-        width: 150px;
-        height: 50px;
-        border-radius: 5px;
-        margin-right: 5px;
-    }
-    
-    .boton-cancelar:hover{
-        background-color: #e9e9e9;
-    }
-    
-    .boton-vaciar{
-        width: 150px;
-        height: 50px;
-        background-color: red;
-        color: white;
-        border-radius: 5px;
-        margin-left: 5px;
-    } */
-    
+
         
      /* ASIDE  */
         .aside{
