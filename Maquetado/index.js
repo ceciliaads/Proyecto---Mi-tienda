@@ -97,7 +97,9 @@ envio.onclick = () => {
 }
 
 
-//////// CONTADOR DE PRODUCTOS \\\\\\\
+//////// CONTADOR DE PRODUCTOS \\\\\\\ 
+//Male: como te comente por Discord, voy a pensar esta funcion mas tranquila sin tener la presion de entregar el tp con esto funcionando.
+// Gracias por toda la ayuda y disposicion!
 
 // const tarjetasOcultas = document.querySelector(".card-product .hidden")
 // const contador = document.querySelector(".productos-mostrados")
@@ -121,9 +123,7 @@ envio.onclick = () => {
 //     if (card.checked){
 //       return false
 //     }
-//   }
-  
-
+// 
 // }
 
 
